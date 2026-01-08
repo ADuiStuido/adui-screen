@@ -5,18 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a581a27-f94e-4ed0-a4f1-9ccc780e28e1" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README_EN.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_EN.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/screen/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/screen/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/screen/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/screen/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/screen/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/screen/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/apps/screen/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/screen/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/screen/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/screen-shell/src/components/AdScreenShell.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/screen-shell/src/components/AdScreenShell/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/screen-shell/src/composables/useAdScreenShell.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/screen-shell/src/composables/useAdScreenShell.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/screen-shell/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/screen-shell/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/screen-shell/src/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/screen-shell/src/types/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/screen/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/screen/vite.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/screen-shell/src/components/AdScreenShell/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/screen-shell/src/components/AdScreenShell/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,6 +26,7 @@
       <list>
         <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="Vue Composition API Component" />
       </list>
     </option>
   </component>
@@ -78,6 +72,11 @@
     "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "D:\\Project\\adui-screen\\packages\\screen-shell\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "vue.recent.templates": [
+      "Vue Composition API Component"
+    ]
   }
 }]]></component>
   <component name="RecapSpentCounter">
@@ -154,7 +153,7 @@
       <option name="presentableId" value="Default" />
       <updated>1767835233488</updated>
       <workItem from="1767835234665" duration="4404000" />
-      <workItem from="1767839693536" duration="8592000" />
+      <workItem from="1767839693536" duration="10062000" />
     </task>
     <servers />
   </component>
