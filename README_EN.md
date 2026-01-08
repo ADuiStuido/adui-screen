@@ -75,7 +75,7 @@ Application Layer
 | Component         | Description                                 |
 |-------------------|---------------------------------------------|
 | **AdAppLayout**   | Application-level layout                    |
-| **AdScreenShell** | Screen shell (HUD can scale, engine cannot) |
+| **Index** | Screen shell (HUD can scale, engine cannot) |
 | **AdCesiumHost**  | Cesium mount & resize container             |
 
 

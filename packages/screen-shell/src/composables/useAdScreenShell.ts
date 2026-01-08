@@ -1,6 +1,6 @@
 import { inject } from "vue";
 import type { InjectionKey, Ref } from "vue";
-import type { AdScreenShellContext } from "../types";
+import type { AdScreenShellContext } from "../types/types";
 
 /**
  * 注入 Key：

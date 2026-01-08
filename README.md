@@ -74,7 +74,7 @@ Application（应用层）
 | 组件                 | 说明                           |
 |--------------------|------------------------------|
 | **AdAppLayout**    | 应用级布局（菜单 / 顶栏 / 内容区）         |
-| **AdScreenShell**  | 大屏壳：HUD 可 scale，渲染引擎不 scale  |
+| **Index**  | 大屏壳：HUD 可 scale，渲染引擎不 scale  |
 | **AdCesiumHost**   | Cesium 容器，仅负责 mount + resize |
 
 
