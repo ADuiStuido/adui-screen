@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { AdScreenShell } from '@adui/screen-shell'
 import AdCesiumHost from '@/components/AdCesiumHost.vue'
+import BizOverlayBridge from '@/components/BizOverlayBridge.vue'
 </script>
 
 <template>
@@ -16,15 +17,11 @@ import AdCesiumHost from '@/components/AdCesiumHost.vue'
       </template>
 
       <template #hud>
-        <div style="color: white; width: 100%; height: 100%; pointer-events: none">HUD</div>
+        <div style="width: 100%; height: 100%; pointer-events: none">
+          <BizOverlayBridge />
+          <div style="color: white">HUD</div>
+        </div>
       </template>
     </AdScreenShell>
   </div>
 </template>
-
-<style>
-body {
-  background: gray;
-  margin: 0;
-}
-</style>

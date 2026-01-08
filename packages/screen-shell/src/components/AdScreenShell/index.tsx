@@ -8,6 +8,7 @@ import {
   onBeforeUnmount,
   nextTick,
   watch,
+  watchEffect,
   type CSSProperties,
   type PropType,
   type Ref,
@@ -114,6 +115,12 @@ export const AdScreenShell = defineComponent({
     /** Engine 视口：裁剪 Engine 的显示区域 */
     const engineViewportEl = ref<HTMLElement | null>(null);
 
+    /** HUD 缩放层内浮层挂载点（随 HUD 一起缩放） */
+    const overlayRootScaledEl = ref<HTMLElement | null>(null);
+
+    /** HUD 非缩放浮层挂载点（不随 HUD 缩放，推荐默认） */
+    const overlayRootUnscaledEl = ref<HTMLElement | null>(null);
+
     /* ============================================================
      * 内部状态
      * ============================================================ */
@@ -150,19 +157,24 @@ export const AdScreenShell = defineComponent({
       designHeight: props.designHeight,
       containerWidth: 0,
       containerHeight: 0,
+      overlayRootScaledEl: null,
+      overlayRootUnscaledEl: null,
     });
 
     provide(AdScreenShellKey, contextRef);
 
     const syncContext = (cw: number, ch: number): void => {
-      contextRef.value = {
-        scale: scale.value,
-        designWidth: props.designWidth,
-        designHeight: props.designHeight,
-        containerWidth: cw,
-        containerHeight: ch,
-      };
+      contextRef.value.scale = scale.value;
+      contextRef.value.designWidth = props.designWidth;
+      contextRef.value.designHeight = props.designHeight;
+      contextRef.value.containerWidth = cw;
+      contextRef.value.containerHeight = ch;
     };
+
+    watchEffect(() => {
+      contextRef.value.overlayRootScaledEl = overlayRootScaledEl.value;
+      contextRef.value.overlayRootUnscaledEl = overlayRootUnscaledEl.value;
+    });
 
     /* ============================================================
      * 初始化尺寸
@@ -336,10 +348,41 @@ export const AdScreenShell = defineComponent({
       transitionDuration: "500ms",
     }));
 
+    const hudOverlayStyle = computed<CSSProperties>(() => ({
+      position: "absolute",
+      left: "0px",
+      top: "0px",
+      right: "0px",
+      bottom: "0px",
+      zIndex: 100,
+      pointerEvents: "none",
+    }));
+
+    const overlayRootUnscaledStyle = computed<CSSProperties>(() => ({
+      position: "absolute",
+      left: "0px",
+      top: "0px",
+      right: "0px",
+      bottom: "0px",
+      zIndex: 9999,
+      pointerEvents: "none",
+    }));
+
+    const overlayRootScaledStyle = computed<CSSProperties>(() => ({
+      position: "absolute",
+      left: "0px",
+      top: "0px",
+      right: "0px",
+      bottom: "0px",
+      zIndex: 9999,
+      pointerEvents: "none",
+    }));
+
     const hudWrapperStyle = computed<CSSProperties>(() => ({
       position: "relative",
       overflow: "hidden",
       zIndex: 100,
+      pointerEvents: "auto",
       transformOrigin: "left top",
       transitionProperty: "all",
       transitionTimingFunction: "cubic-bezier(0.4, 0, 0.2, 1)",
@@ -363,13 +406,23 @@ export const AdScreenShell = defineComponent({
         </div>
 
         {/* HUD 覆盖层 */}
-        <div class="ad-screen-shell__hud-overlay">
+        <div class="ad-screen-shell__hud-overlay" style={hudOverlayStyle.value}>
+          <div
+            ref={overlayRootUnscaledEl}
+            class="ad-screen-shell__overlay-root ad-screen-shell__overlay-root--unscaled"
+            style={overlayRootUnscaledStyle.value}
+          />
           <div
             ref={hudWrapperEl}
             class="ad-screen-shell__hud-wrapper"
             style={hudWrapperStyle.value}
           >
             {slots.hud?.()}
+            <div
+              ref={overlayRootScaledEl}
+              class="ad-screen-shell__overlay-root ad-screen-shell__overlay-root--scaled"
+              style={overlayRootScaledStyle.value}
+            />
           </div>
         </div>
       </section>

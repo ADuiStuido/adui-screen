@@ -25,9 +25,23 @@ export type AdScreenScaleMode =
  * - 引擎层（Cesium）必须使用真实像素渲染，不允许 transform scale
  */
 export interface AdScreenShellContext {
-  readonly scale: number;
-  readonly designWidth: number;
-  readonly designHeight: number;
-  readonly containerWidth: number;
-  readonly containerHeight: number;
+  scale: number;
+  designWidth: number;
+  designHeight: number;
+  containerWidth: number;
+  containerHeight: number;
+
+  /**
+   * HUD 缩放层内的浮层挂载点：
+   * - 适合：希望弹出层随 HUD 一起缩放的场景
+   * - 示例：设计稿像素对齐的下拉菜单、tooltip
+   */
+  overlayRootScaledEl: HTMLElement | null;
+
+  /**
+   * HUD 非缩放浮层挂载点：
+   * - 适合：希望弹出层按真实像素显示（更清晰、交互更稳定）
+   * - 推荐：默认将 UI 组件库的 Teleport/Portal 指向这里
+   */
+  overlayRootUnscaledEl: HTMLElement | null;
 }
