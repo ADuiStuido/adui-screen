@@ -1,5 +1,35 @@
 {
   "name": "adui-screen",
+  "description": "Engine-oriented large-screen visualization framework for building scalable, maintainable big-screen dashboards (currently powered by CesiumJS).",
+  "keywords": [
+    "adui",
+    "adui-screen",
+    "large-screen",
+    "big-screen",
+    "dashboard",
+    "visualization",
+    "geospatial",
+    "3d",
+    "gis",
+    "cesium",
+    "cesiumjs",
+    "engine-oriented",
+    "vue",
+    "vue3",
+    "typescript",
+    "monorepo",
+    "turborepo"
+  ],
+  "homepage": "https://github.com/ADuiStuido/adui-screen#readme",
+  "bugs": {
+    "url": "https://github.com/ADuiStuido/adui-screen/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ADuiStuido/adui-screen.git"
+  },
+  "license": "MIT",
+  "author": "ADui",
   "private": true,
   "packageManager": "pnpm@8.15.6",
   "scripts": {

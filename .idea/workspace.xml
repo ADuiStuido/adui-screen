@@ -5,11 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a581a27-f94e-4ed0-a4f1-9ccc780e28e1" name="更改" comment="">
-      <change beforePath="$PROJECT_DIR$/.husky/pre-commit" beforeDir="false" afterPath="$PROJECT_DIR$/.husky/pre-commit" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/screen/.vite/deps/chunk-FD2CSYQN.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/screen/.vite/deps/chunk-FD2CSYQN.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/screen/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/apps/screen/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,7 +137,7 @@
       <option name="presentableId" value="Default" />
       <updated>1767835233488</updated>
       <workItem from="1767835234665" duration="4404000" />
-      <workItem from="1767839693536" duration="3671000" />
+      <workItem from="1767839693536" duration="3974000" />
     </task>
     <servers />
   </component>
